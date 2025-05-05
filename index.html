@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Soundtrack</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script type="module" src="/services/api.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Barra de navegación lateral simplificada -->
+      <nav class="sidebar" id="sidebar">
+        <div class="logo" id="toggle-sidebar">
+          <h2>ST</h2>
+          <span class="logo-short">ST</span>
+        </div>
+
+        <ul class="nav-links animate__animated animate__fadeInLeft">
+          <li>
+            <a href="#hero" class="active">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="text">Inicio</span>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#energy" class="mood-energy-link">
+              <span class="icon"><i class="fas fa-bolt"></i></span>
+              <span class="text">Energía</span>
+            </a>
+          </li>
+          <li>
+            <a href="#happy" class="mood-happy-link">
+              <span class="icon"><i class="fas fa-smile"></i></span>
+              <span class="text">Felicidad</span>
+            </a>
+          </li>
+          <li>
+            <a href="#sad" class="mood-sad-link">
+              <span class="icon"><i class="fas fa-cloud-rain"></i></span>
+              <span class="text">Tristeza</span>
+            </a>
+          </li>
+          <li>
+            <a href="#relaxed" class="mood-relaxed-link">
+              <span class="icon"><i class="fas fa-spa"></i></span>
+              <span class="text">Relajación</span>
+            </a>
+          </li>
+          <li>
+            <a href="#party" class="mood-party-link">
+              <span class="icon"><i class="fas fa-cocktail"></i></span>
+              <span class="text">Fiesta</span>
+            </a>
+          </li>
+          <li>
+            <a href="#workout" class="mood-workout-link">
+              <span class="icon"><i class="fas fa-dumbbell"></i></span>
+              <span class="text">Entreno</span>
+            </a>
+          </li>
+          <li>
+            <a href="#love" class="mood-love-link">
+              <span class="icon"><i class="fas fa-heart"></i></span>
+              <span class="text">Amor</span>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="#random">
+              <span class="icon"><i class="fas fa-random"></i></span>
+              <span class="text">Aleatorio</span>
+            </a>
+          </li>
+          <li>
+            <a href="#favorites">
+              <span class="icon"><i class="fas fa-star"></i></span>
+              <span class="text">Favoritos</span>
+            </a>
+          </li>
+          <li>
+            <a href="#playlist">
+              <span class="icon"><i class="fas fa-headphones"></i></span>
+              <span class="text">Playlist</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="content" id="content">
+        <!-- Sección Hero -->
+        <section id="hero" class="hero-section">
+          <div class="hero-content">
+            <h1
+              class="neon-text animate__animated animate__fadeIn animate__faster"
+            >
+              Mi Soundtrack
+            </h1>
+            <p
+              class="subtitle animate__animated animate__fadeIn animate__faster animate__delay-0.3s"
+            >
+              Si mi vida fuera un soundtrack sonaría así
+            </p>
+            <div
+              class="neon-button-container animate__animated animate__fadeIn animate__faster animate__delay-0.5s"
+            >
+              <button class="btn-primary neon-button">Explorar</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="neon-circle">
+              <div class="neon-equalizer">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Energía -->
+        <section id="energy" class="mood-section energy-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading energy-heading">
+              Cómo suena cuando tengo
+              <span class="neon-text energy-text">ENERGÍA</span>
+            </h2>
+            <p class="mood-description">
+              Ritmos acelerados que me impulsan a seguir adelante
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image energy-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción energética</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Ojalá</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Milo J</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">111</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">2023</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Trap/R&B</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">
+                        Esta canción refleja un deseo melancólico y un anhelo
+                        profundo, con una producción minimalista que resalta la
+                        voz y el mensaje.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image energy-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción energética</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image energy-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción energética</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image energy-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción energética</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Felicidad -->
+        <section id="happy" class="mood-section happy-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading happy-heading">
+              Cómo suena cuando me siento
+              <span class="neon-text happy-text">BIEN</span>
+            </h2>
+            <p class="mood-description">
+              Melodías luminosas que reflejan mi estado positivo
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image happy-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción alegre</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image happy-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción alegre</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image happy-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción alegre</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image happy-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción alegre</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Tristeza -->
+        <section id="sad" class="mood-section sad-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading sad-heading">
+              Cómo suena cuando estoy
+              <span class="neon-text sad-text">TRISTE</span>
+            </h2>
+            <p class="mood-description">
+              Composiciones melancólicas que acompañan mis momentos bajos
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image sad-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción melancólica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image sad-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción melancólica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image sad-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción melancólica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image sad-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción melancólica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Relajación -->
+        <section id="relaxed" class="mood-section relaxed-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading relaxed-heading">
+              Cómo suena cuando me siento
+              <span class="neon-text relaxed-text">RELAJADA</span>
+            </h2>
+            <p class="mood-description">
+              Sonidos suaves que me ayudan a desconectar
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image relaxed-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción relajante</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image relaxed-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción relajante</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image relaxed-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción relajante</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image relaxed-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción relajante</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Fiesta -->
+        <section id="party" class="mood-section party-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading party-heading">
+              Cómo suena cuando estoy en una
+              <span class="neon-text party-text">FIESTA</span>
+            </h2>
+            <p class="mood-description">
+              Beats que me hacen bailar toda la noche
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image party-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción de fiesta</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image party-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción de fiesta</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image party-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción de fiesta</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image party-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción de fiesta</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Entreno -->
+        <section id="workout" class="mood-section workout-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading workout-heading">
+              Cómo suena cuando
+              <span class="neon-text workout-text">ENTRENO</span>
+            </h2>
+            <p class="mood-description">
+              Ritmos que potencian mi rendimiento físico
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image workout-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción de entreno</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image workout-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción de entreno</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image workout-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción de entreno</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image workout-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción de entreno</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Amor -->
+        <section id="love" class="mood-section love-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="mood-heading love-heading">
+              Cómo suena cuando estoy
+              <span class="neon-text love-text">ENAMORADA</span>
+            </h2>
+            <p class="mood-description">
+              Melodías que expresan mis sentimientos más intensos
+            </p>
+          </div>
+
+          <div class="mood-grid">
+            <div
+              class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="mood-item-image love-image-1"></div>
+              <div class="mood-item-content">
+                <h3>Canción romántica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="mood-item-image love-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción romántica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="mood-item-image love-image-3"></div>
+              <div class="mood-item-content">
+                <h3>Canción romántica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+            <div
+              class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <div class="mood-item-image love-image-2"></div>
+              <div class="mood-item-content">
+                <h3>Canción romántica</h3>
+                <p>Artista - Álbum</p>
+                <button
+                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  Escuchar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Aleatoria -->
+        <section id="random" class="random-section">
+          <h2
+            class="neon-heading wow animate__animated animate__fadeIn animate__faster"
+          >
+            Descubre Aleatoriamente
+          </h2>
+
+          <div class="memory-cards">
+            <div
+              class="memory-card wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <h3 class="memory-title">
+                Esta canción me recuerda cuando ella se fue
+              </h3>
+              <div class="vinyl-container">
+                <div class="vinyl-disc">
+                  <div class="vinyl-label">
+                    <span class="vinyl-song">Nombre de la canción</span>
+                    <span class="vinyl-artist">Artista</span>
+                  </div>
+                </div>
+              </div>
+              <p class="memory-description">
+                "A veces las canciones nos llevan a lugares donde las palabras
+                no pueden"
+              </p>
+              <div class="playback-controls">
+                <button
+                  class="btn-play animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-play"></i>
+                </button>
+                <button
+                  class="btn-pause animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-pause"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="memory-card wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <h3 class="memory-title">Descubrimiento del día</h3>
+              <div class="vinyl-container">
+                <div class="vinyl-disc discovery-vinyl">
+                  <div class="vinyl-label">
+                    <span class="vinyl-song">Nueva canción</span>
+                    <span class="vinyl-artist">Artista emergente</span>
+                  </div>
+                </div>
+              </div>
+              <p class="memory-description">
+                Una canción que podría cambiar tu perspectiva musical
+              </p>
+              <div class="playback-controls">
+                <button
+                  class="btn-play animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-play"></i>
+                </button>
+                <button
+                  class="btn-pause animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-pause"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="memory-card wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <h3 class="memory-title">Mood del momento</h3>
+              <div class="vinyl-container">
+                <div class="vinyl-disc happy-vinyl">
+                  <div class="vinyl-label">
+                    <span class="vinyl-song">Canción feliz</span>
+                    <span class="vinyl-artist">Tu artista favorito</span>
+                  </div>
+                </div>
+              </div>
+              <p class="memory-description">
+                La música perfecta para este instante
+              </p>
+              <div class="playback-controls">
+                <button
+                  class="btn-play animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-play"></i>
+                </button>
+                <button
+                  class="btn-pause animate__animated animate__pulse animate__infinite animate__slow"
+                >
+                  <i class="fas fa-pause"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="neon-button-container">
+            <button
+              class="btn-randomize animate__animated animate__pulse animate__infinite animate__slow"
+            >
+              Aleatorizar
+            </button>
+          </div>
+        </section>
+
+        <!-- Sección Artistas Favoritos -->
+        <section id="favorites" class="favorites-section">
+          <h2
+            class="neon-heading wow animate__animated animate__fadeIn animate__faster"
+          >
+            Artistas Favoritos
+          </h2>
+          <div class="artists-grid">
+            <div
+              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="artist-image"></div>
+              <h3>Nombre Artista</h3>
+              <p>Género principal</p>
+            </div>
+            <div
+              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <div class="artist-image"></div>
+              <h3>Nombre Artista</h3>
+              <p>Género principal</p>
+            </div>
+            <div
+              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <div class="artist-image"></div>
+              <h3>Nombre Artista</h3>
+              <p>Género principal</p>
+            </div>
+            <div
+              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <div class="artist-image"></div>
+              <h3>Nombre Artista</h3>
+              <p>Género principal</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Playlist -->
+        <section id="playlist" class="playlist-section">
+          <h2
+            class="neon-heading wow animate__animated animate__fadeIn animate__faster"
+          >
+            Mi Playlist Actual
+          </h2>
+          <div
+            class="playlist-container neon-glow wow animate__animated animate__fadeInUp animate__faster"
+          >
+            <div
+              class="track animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <span class="track-number">01</span>
+              <div class="track-info">
+                <h4>Nombre de la canción</h4>
+                <p>Artista</p>
+              </div>
+              <span class="track-duration">3:45</span>
+            </div>
+            <div
+              class="track animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
+            >
+              <span class="track-number">02</span>
+              <div class="track-info">
+                <h4>Nombre de la canción</h4>
+                <p>Artista</p>
+              </div>
+              <span class="track-duration">4:20</span>
+            </div>
+            <div
+              class="track animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
+            >
+              <span class="track-number">03</span>
+              <div class="track-info">
+                <h4>Nombre de la canción</h4>
+                <p>Artista</p>
+              </div>
+              <span class="track-duration">3:10</span>
+            </div>
+            <div
+              class="track animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
+            >
+              <span class="track-number">04</span>
+              <div class="track-info">
+                <h4>Nombre de la canción</h4>
+                <p>Artista</p>
+              </div>
+              <span class="track-duration">3:35</span>
+            </div>
+            <div
+              class="track animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              <span class="track-number">05</span>
+              <div class="track-info">
+                <h4>Nombre de la canción</h4>
+                <p>Artista</p>
+              </div>
+              <span class="track-duration">2:58</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección Tu Vida -->
+        <section id="yourlife" class="yourlife-section">
+          <div
+            class="yourlife-content wow animate__animated animate__fadeIn animate__faster"
+          >
+            <h2 class="neon-heading big-text">Y tu vida, ¿cómo suena?</h2>
+            <div class="neon-button-container">
+              <button
+                class="btn-primary neon-button animate__animated animate__pulse animate__infinite animate__slow"
+              >
+                Cuéntame
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-content">
+            <p class="animate__animated animate__fadeInUp animate__faster">
+              © 2023 Todos los derechos reservados
+            </p>
+            <p
+              class="animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
+            >
+              "La música no se explica, se escucha"
+            </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      // Toggle sidebar
+      document
+        .getElementById("toggle-sidebar")
+        .addEventListener("click", function () {
+          const sidebar = document.getElementById("sidebar");
+          const content = document.getElementById("content");
+
+          sidebar.classList.toggle("collapsed");
+          content.classList.toggle("expanded");
+
+          // Guardar estado en localStorage
+          const isCollapsed = sidebar.classList.contains("collapsed");
+          localStorage.setItem("sidebarCollapsed", isCollapsed);
+        });
+
+      // Comprobar estado guardado al cargar la página
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const content = document.getElementById("content");
+        const toggleBtn = document.getElementById("toggle-sidebar");
+
+        // Recuperar estado de localStorage
+        const isCollapsed = localStorage.getItem("sidebarCollapsed") === "true";
+
+        if (isCollapsed) {
+          sidebar.classList.add("collapsed");
+          content.classList.add("expanded");
+        }
+
+        // Inicializar WOW.js
+        new WOW({
+          boxClass: "wow",
+          animateClass: "animate__animated",
+          offset: 100,
+          mobile: true,
+          live: true,
+        }).init();
+
+        // Activar el estado activo en la navegación al hacer scroll
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        window.addEventListener("scroll", () => {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === current) {
+              link.classList.add("active");
+            }
+          });
+        });
+
+        // Controles de reproducción para vinilos
+        const playButtons = document.querySelectorAll(".btn-play");
+        const pauseButtons = document.querySelectorAll(".btn-pause");
+
+        playButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const card = this.closest(".memory-card");
+            const vinylDisc = card.querySelector(".vinyl-disc");
+            vinylDisc.classList.remove("paused");
+          });
+        });
+
+        pauseButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const card = this.closest(".memory-card");
+            const vinylDisc = card.querySelector(".vinyl-disc");
+            vinylDisc.classList.add("paused");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
