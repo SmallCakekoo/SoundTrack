@@ -121,7 +121,9 @@ function mostrarCancion(cancion) {
         audioActual.pause();
         // Encontrar todos los botones y restaurarlos excepto el actual
         document.querySelectorAll(".btn-mood").forEach((btn) => {
-          if (btn !== this) btn.textContent = "Escuchar";
+          if (btn !== this)
+            btn.innerHTML =
+              '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
         });
       }
 
@@ -130,20 +132,22 @@ function mostrarCancion(cancion) {
         // Si está reproduciendo, pausar
         if (!audioActual.paused) {
           audioActual.pause();
-          this.textContent = "Escuchar";
+          this.innerHTML =
+            '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
           console.log(`Reproducción de ${nombreCancion} pausada`);
           return;
         }
         // Si está pausado, reanudar
         else {
           const playPromise = audioActual.play();
-          this.textContent = "Pausar";
+          this.innerHTML = '<i class="fas fa-pause"></i>&nbsp;&nbsp;Pausar';
           console.log(`Reproducción de ${nombreCancion} reanudada`);
 
           if (playPromise !== undefined) {
             playPromise.catch((error) => {
               console.error("Error al reproducir:", error);
-              this.textContent = "Escuchar";
+              this.innerHTML =
+                '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
             });
           }
           return;
@@ -163,11 +167,13 @@ function mostrarCancion(cancion) {
 
       audioActual.onerror = (e) => {
         console.error(`Error al cargar el audio de ${nombreCancion}:`, e);
-        this.textContent = "Escuchar";
+        this.innerHTML =
+          '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
       };
 
       audioActual.onended = () => {
-        this.textContent = "Escuchar";
+        this.innerHTML =
+          '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
         console.log(`Reproducción de ${nombreCancion} finalizada`);
       };
 
@@ -175,13 +181,14 @@ function mostrarCancion(cancion) {
 
       // Intentar reproducir
       const playPromise = audioActual.play();
-      this.textContent = "Pausar";
+      this.innerHTML = '<i class="fas fa-pause"></i>&nbsp;&nbsp;Pausar';
       console.log(`Reproducción de ${nombreCancion} iniciada`);
 
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
           console.error(`Error al reproducir ${nombreCancion}:`, error);
-          this.textContent = "Escuchar";
+          this.innerHTML =
+            '<i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar';
         });
       }
     };

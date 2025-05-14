@@ -126,7 +126,14 @@
             <div
               class="neon-button-container animate__animated animate__fadeIn animate__faster animate__delay-0.5s"
             >
-              <button class="btn-primary neon-button">Explorar</button>
+              <a
+                href="#energy"
+                onclick="event.preventDefault(); document.querySelector('#energy').scrollIntoView({ behavior: 'smooth' });"
+              >
+                <button class="btn-primary neon-button">
+                  <i class="fas fa-search"></i>&nbsp;&nbsp;Explorar
+                </button>
+              </a>
             </div>
           </div>
           <div class="hero-image">
@@ -170,7 +177,7 @@
                       <button
                         class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
                       >
-                        Escuchar
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
                       </button>
                     </div>
                   </div>
@@ -212,43 +219,145 @@
             <div
               class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image energy-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción energética</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image energy-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción energética</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción energética</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image energy-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción energética</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image energy-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción energética</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción energética</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item energy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image energy-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción energética</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image energy-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción energética</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood energy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción energética</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -272,57 +381,193 @@
             <div
               class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image happy-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción alegre</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image happy-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción alegre</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción alegre</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image happy-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción alegre</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image happy-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción alegre</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción alegre</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image happy-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción alegre</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image happy-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción alegre</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción alegre</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item happy-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image happy-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción alegre</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image happy-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción alegre</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood happy-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción alegre</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -346,57 +591,193 @@
             <div
               class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image sad-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción melancólica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image sad-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción melancólica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción melancólica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image sad-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción melancólica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image sad-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción melancólica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción melancólica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image sad-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción melancólica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image sad-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción melancólica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción melancólica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item sad-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image sad-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción melancólica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image sad-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción melancólica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood sad-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción melancólica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -420,57 +801,193 @@
             <div
               class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image relaxed-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción relajante</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image relaxed-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción relajante</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción relajante</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image relaxed-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción relajante</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image relaxed-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción relajante</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción relajante</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image relaxed-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción relajante</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image relaxed-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción relajante</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción relajante</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item relaxed-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image relaxed-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción relajante</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image relaxed-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción relajante</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood relaxed-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción relajante</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -494,57 +1011,193 @@
             <div
               class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image party-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción de fiesta</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image party-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de fiesta</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de fiesta</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image party-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción de fiesta</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image party-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de fiesta</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de fiesta</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image party-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción de fiesta</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image party-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de fiesta</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de fiesta</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item party-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image party-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción de fiesta</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image party-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de fiesta</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood party-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de fiesta</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -568,57 +1221,193 @@
             <div
               class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image workout-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción de entreno</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image workout-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de entreno</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de entreno</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image workout-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción de entreno</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image workout-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de entreno</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de entreno</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image workout-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción de entreno</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image workout-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de entreno</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de entreno</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item workout-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image workout-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción de entreno</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image workout-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción de entreno</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood workout-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción de entreno</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -642,57 +1431,193 @@
             <div
               class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
             >
-              <div class="mood-item-image love-image-1"></div>
-              <div class="mood-item-content">
-                <h3>Canción romántica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image love-image-1"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción romántica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción romántica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
             >
-              <div class="mood-item-image love-image-2"></div>
-              <div class="mood-item-content">
-                <h3>Canción romántica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image love-image-2"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción romántica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción romántica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
             >
-              <div class="mood-item-image love-image-3"></div>
-              <div class="mood-item-content">
-                <h3>Canción romántica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image love-image-3"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción romántica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción romántica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               class="mood-item love-item wow animate__animated animate__fadeInUp animate__faster animate__delay-0.9s"
             >
-              <div class="mood-item-image love-image-4"></div>
-              <div class="mood-item-content">
-                <h3>Canción romántica</h3>
-                <p>Artista - Álbum</p>
-                <button
-                  class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
-                >
-                  Escuchar
-                </button>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="mood-item-image love-image-4"></div>
+                    <div class="mood-item-content">
+                      <h3>Canción romántica</h3>
+                      <p>Artista - Álbum</p>
+                      <button
+                        class="btn-mood love-btn animate__animated animate__pulse animate__infinite animate__slow"
+                      >
+                        <i class="fas fa-headphones"></i>&nbsp;&nbsp;Escuchar
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="flip-card-content">
+                      <h3>Detalles de la canción</h3>
+                      <ul class="song-details">
+                        <li>
+                          <strong>Título:</strong>
+                          <span class="song-title">Canción romántica</span>
+                        </li>
+                        <li>
+                          <strong>Artista:</strong>
+                          <span class="song-artist">Artista</span>
+                        </li>
+                        <li>
+                          <strong>Álbum:</strong>
+                          <span class="song-album">Álbum</span>
+                        </li>
+                        <li>
+                          <strong>Lanzamiento:</strong>
+                          <span class="song-release">Año</span>
+                        </li>
+                        <li>
+                          <strong>Género:</strong>
+                          <span class="song-genre">Género</span>
+                        </li>
+                      </ul>
+                      <p class="song-description">Descripción de la canción</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -802,7 +1727,7 @@
             <button
               class="btn-randomize animate__animated animate__pulse animate__infinite animate__slow"
             >
-              Aleatorizar
+              <i class="fas fa-dice"></i>&nbsp;&nbsp;Aleatorizar
             </button>
           </div>
         </section>
@@ -919,7 +1844,7 @@
               <button
                 class="btn-primary neon-button animate__animated animate__pulse animate__infinite animate__slow"
               >
-                Cuéntame
+                <i class="fas fa-comment"></i>&nbsp;&nbsp;Cuéntame
               </button>
             </div>
           </div>

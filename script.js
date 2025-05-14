@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".btn-mood:not(.energy-btn)").forEach((boton) => {
     if (!boton.onclick) {
       boton.onclick = function (e) {
+        e.stopPropagation(); // Evitar que el clic se propague a la tarjeta
         console.log(
           "Botón presionado:",
           this.parentElement.querySelector("h3").textContent
@@ -21,42 +22,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Funcionalidad para voltear la tarjeta al hacer clic
-  const flipCard = document.querySelector(".flip-card");
-  if (flipCard) {
-    // Voltear cuando se hace clic en la tarjeta (excepto en el botón de escuchar)
-    flipCard.addEventListener("click", function (e) {
-      // Si se hizo clic en el botón de escuchar o sus hijos, no volteamos
-      if (
-        e.target.classList.contains("energy-btn") ||
-        e.target.closest(".energy-btn")
-      ) {
-        // No hacer nada, dejamos que el botón maneje su propio evento
-        return;
+  // Funcionalidad para voltear todas las tarjetas al hacer clic
+  const flipCards = document.querySelectorAll(".flip-card");
+  if (flipCards.length > 0) {
+    flipCards.forEach(function (flipCard) {
+      // Voltear cuando se hace clic en la tarjeta (excepto en el botón de escuchar)
+      flipCard.addEventListener("click", function (e) {
+        // Si se hizo clic en el botón de escuchar o sus hijos, no volteamos
+        if (
+          e.target.classList.contains("btn-mood") ||
+          e.target.closest(".btn-mood")
+        ) {
+          // No hacer nada, dejamos que el botón maneje su propio evento
+          return;
+        }
+
+        // Alternamos la clase flipped
+        this.classList.toggle("flipped");
+
+        // Si está volteada, asegurarnos de que sea visible por encima de otras tarjetas
+        if (this.classList.contains("flipped")) {
+          this.style.zIndex = "10";
+        } else {
+          // Después de un tiempo para la animación, restaurar el z-index
+          setTimeout(() => {
+            this.style.zIndex = "1";
+          }, 600); // Este tiempo debe coincidir con la duración de la transición
+        }
+      });
+
+      // Añadimos evento para volver a voltear la tarjeta si se hace doble clic en el lado trasero
+      const flipCardBack = flipCard.querySelector(".flip-card-back");
+      if (flipCardBack) {
+        flipCardBack.addEventListener("dblclick", function (e) {
+          flipCard.classList.remove("flipped");
+          // Después de un tiempo para la animación, restaurar el z-index
+          setTimeout(() => {
+            flipCard.style.zIndex = "1";
+          }, 600);
+        });
       }
-
-      // Alternamos la clase flipped
-      this.classList.toggle("flipped");
-
-      // Reproducimos un sonido de volteo
-      const flipSound = new Audio(
-        "https://www.soundjay.com/switch/sounds/switch-19.mp3"
-      );
-      flipSound.volume = 0.3;
-      flipSound
-        .play()
-        .catch((e) => console.log("No se pudo reproducir el sonido de volteo"));
     });
 
-    // Añadimos evento para volver a voltear la tarjeta si se hace doble clic en el lado trasero
-    const flipCardBack = flipCard.querySelector(".flip-card-back");
-    if (flipCardBack) {
-      flipCardBack.addEventListener("dblclick", function (e) {
-        flipCard.classList.remove("flipped");
-      });
-    }
-
-    console.log("Funcionalidad de tarjeta volteable habilitada");
+    console.log(
+      "Funcionalidad de tarjetas volteables habilitada para " +
+        flipCards.length +
+        " tarjetas"
+    );
   }
 
   console.log("Scripts inicializados correctamente");
