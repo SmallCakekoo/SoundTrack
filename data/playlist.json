@@ -1,0 +1,62 @@
+[
+  {
+    "nombre_cancion": "Olimpo",
+    "artista": "Milo J",
+    "duracion": "2:50",
+    "enlace_cancion": "assets/data/playlist/MILO J - OLIMPO.m4a"
+  },
+  {
+    "nombre_cancion": "Retirada",
+    "artista": "Milo J",
+    "duracion": "2:52",
+    "enlace_cancion": "assets/data/playlist/MILO J - RETIRADA.m4a"
+  },
+  {
+    "nombre_cancion": "Ojalá",
+    "artista": "Milo J",
+    "duracion": "2:54",
+    "enlace_cancion": "assets/data/playlist/MILO J, BHAVI - OJALA.m4a"
+  },
+  {
+    "nombre_cancion": "Turista",
+    "artista": "Bad Bunny",
+    "duracion": "3:56",
+    "enlace_cancion": "assets/data/playlist/BAD BUNNY - TURiSTA (Visualizer) _ DeBÍ TiRAR MáS FOToS.m4a"
+  },
+  {
+    "nombre_cancion": "Fruto",
+    "artista": "Milo J",
+    "duracion": "2:14",
+    "enlace_cancion": "assets/data/playlist/MILO J - Fruto.m4a"
+  },
+  {
+    "nombre_cancion": "I Wonder",
+    "artista": "Kanye West",
+    "duracion": "4:04",
+    "enlace_cancion": "assets/data/playlist/I Wonder.m4a"
+  },
+  {
+    "nombre_cancion": "Bailaré",
+    "artista": "Cyclo",
+    "duracion": "3:46",
+    "enlace_cancion": "assets/data/playlist/Cyclo - Bailaré.m4a"
+  },
+  {
+    "nombre_cancion": "No le mienta a mamá",
+    "artista": "Jaze",
+    "duracion": "4:15",
+    "enlace_cancion": "assets/data/playlist/Jaze - no le mienta a mamá (Video Oficial).m4a"
+  },
+  {
+    "nombre_cancion": "Christmas Kids",
+    "artista": "Roar",
+    "duracion": "2:16",
+    "enlace_cancion": "assets/data/playlist/Roar - Christmas Kids.m4a"
+  },
+  {
+    "nombre_cancion": "Last Dance",
+    "artista": "Eve",
+    "duracion": "4:00",
+    "enlace_cancion": "assets/data/playlist/ラストダンス - Eve MV.m4a"
+  }
+]

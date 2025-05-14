@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Piter G",
+    "genero": "Rap / Hip Hop",
+    "foto": "https://i.scdn.co/image/ab6761610000e5eb9f04a7026f6c3fc504863a7a"
+  },
+  {
+    "nombre": "Residente",
+    "genero": "Rap / Fusión Alternativa / Latino",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Residente_en_Vivo.png/640px-Residente_en_Vivo.png"
+  },
+  {
+    "nombre": "Eve",
+    "genero": "J-Pop / Rock Alternativo",
+    "foto": "https://i.scdn.co/image/ab6761610000e5ebc2a7aaed3f90f92e6a46b49b"
+  },
+  {
+    "nombre": "Natalia Lafourcade",
+    "genero": "Folk / Bolero / Pop Alternativo",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Natalia_Lafourcade_en_2018.png/640px-Natalia_Lafourcade_en_2018.png"
+  }
+]

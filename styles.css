@@ -262,6 +262,9 @@ html {
 
 .neon-button-container {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn-primary {
@@ -988,21 +991,47 @@ html {
 }
 
 .btn-randomize {
-  background: rgba(255, 0, 255, 0.1);
-  border: 1px solid var(--primary-color);
-  color: var(--text-color);
-  padding: 10px 25px;
+  background: linear-gradient(45deg, #5f0a87, #a4508b);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
   font-size: 1rem;
-  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(164, 80, 139, 0.6);
+  margin-top: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 30px;
-  box-shadow: var(--neon-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-randomize:hover {
-  background: rgba(255, 0, 255, 0.3);
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+  background: linear-gradient(45deg, #a4508b, #5f0a87);
+  box-shadow: 0 0 15px rgba(164, 80, 139, 0.8);
+  transform: translateY(-3px);
+}
+
+.btn-randomize-playlist {
+  background: linear-gradient(45deg, #5f0a87, #a4508b);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(164, 80, 139, 0.6);
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-randomize-playlist:hover {
+  background: linear-gradient(45deg, #a4508b, #5f0a87);
+  box-shadow: 0 0 15px rgba(164, 80, 139, 0.8);
+  transform: translateY(-3px);
 }
 
 /* Sección Artistas Favoritos */
@@ -1102,12 +1131,20 @@ html {
   align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   text-align: left;
+  position: relative;
 }
 
 .track:hover {
   background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.track.playing {
+  background: rgba(255, 0, 255, 0.1);
+  border-left: 3px solid #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
 }
 
 .track:last-child {
@@ -1140,6 +1177,28 @@ html {
 .track-duration {
   font-size: 0.9rem;
   opacity: 0.7;
+  margin-right: 10px;
+}
+
+.btn-play-track {
+  background: none;
+  border: none;
+  color: #ff00ff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-play-track:hover {
+  background: rgba(255, 0, 255, 0.2);
+  transform: scale(1.1);
 }
 
 /* Sección Tu Vida */
@@ -1389,18 +1448,111 @@ html {
 }
 
 .flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Fondos específicos para cada tipo de emoción en flip-card-back */
+.energy-item .flip-card-back {
   background: linear-gradient(
     135deg,
     rgba(15, 15, 25, 0.95),
     rgba(255, 20, 147, 0.3)
   );
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px;
+}
+
+.happy-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(255, 204, 0, 0.3)
+  );
+}
+
+.sad-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(65, 105, 225, 0.3)
+  );
+}
+
+.relaxed-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(0, 191, 255, 0.3)
+  );
+}
+
+.party-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(153, 50, 204, 0.3)
+  );
+}
+
+.workout-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(255, 69, 0, 0.3)
+  );
+}
+
+.love-item .flip-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 25, 0.95),
+    rgba(255, 105, 180, 0.3)
+  );
+}
+
+/* Divisor para las secciones de la tarjeta */
+.flip-card-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 12px 0;
+  width: 100%;
+}
+
+/* Contenido de la tarjeta volteada */
+.flip-card-back h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.flip-card-back .card-description {
+  flex: 1;
   overflow-y: auto;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+.flip-card-back .card-description::-webkit-scrollbar {
+  width: 4px;
+}
+
+.flip-card-back .card-description::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.flip-card-back .card-description::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.flip-card-back .card-footer {
+  margin-top: auto;
+  text-align: center;
 }
 
 /* Mejorar los efectos neón para cada categoría de texto */
@@ -1566,13 +1718,4 @@ html {
 
 .love-item.mood-item:hover {
   box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
-}
-
-/* Agregar borde inferior al título */
-.flip-card-back h3 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 8px;
 }

@@ -1,5 +1,7 @@
 // Importar el JSON de canciones
 let canciones = [];
+let cancionesAleatorias = []; // Añadido para almacenar las canciones aleatorias
+let cancionesPlaylist = []; // Añadido para almacenar las canciones de la playlist
 
 // Variable global para el reproductor de audio
 let audioActual = null;
@@ -15,6 +17,256 @@ async function cargarCanciones() {
     console.error("Error al cargar el archivo JSON:", error);
     return [];
   }
+}
+
+// Función para cargar las canciones aleatorias desde el JSON
+async function cargarCancionesAleatorias() {
+  try {
+    const respuesta = await fetch("data/randomsongs.json");
+    cancionesAleatorias = await respuesta.json();
+    console.log("Canciones aleatorias cargadas:", cancionesAleatorias.length);
+    return cancionesAleatorias;
+  } catch (error) {
+    console.error("Error al cargar el archivo de canciones aleatorias:", error);
+    return [];
+  }
+}
+
+// Función para cargar las canciones de la playlist desde el JSON
+async function cargarPlaylist() {
+  try {
+    const respuesta = await fetch("data/playlist.json");
+    cancionesPlaylist = await respuesta.json();
+    console.log("Canciones de playlist cargadas:", cancionesPlaylist.length);
+    return cancionesPlaylist;
+  } catch (error) {
+    console.error("Error al cargar el archivo de playlist:", error);
+    return [];
+  }
+}
+
+// Función para randomizar y mostrar canciones aleatorias en la sección "Descubre Aleatoriamente"
+function mostrarCancionesAleatorias() {
+  if (cancionesAleatorias.length === 0) {
+    console.error("No hay canciones aleatorias disponibles");
+    return;
+  }
+
+  // Obtener las memory cards
+  const memoryCards = document.querySelectorAll(".memory-card");
+
+  if (memoryCards.length === 0) {
+    console.error("No se encontraron memory cards en la interfaz");
+    return;
+  }
+
+  // Para cada memory card, seleccionar una canción aleatoria
+  memoryCards.forEach((card) => {
+    // Seleccionar una canción aleatoria
+    const randomIndex = Math.floor(Math.random() * cancionesAleatorias.length);
+    const cancion = cancionesAleatorias[randomIndex];
+
+    // Actualizar los elementos de la tarjeta
+    const vinylSong = card.querySelector(".vinyl-song");
+    const vinylArtist = card.querySelector(".vinyl-artist");
+    const memoryDescription = card.querySelector(".memory-description");
+    const title = card.querySelector(".memory-title");
+
+    if (vinylSong) vinylSong.textContent = cancion.cancion;
+    if (vinylArtist) vinylArtist.textContent = cancion.artista;
+    if (memoryDescription) memoryDescription.textContent = cancion.frase;
+    if (title) title.textContent = cancion.titulo;
+
+    // Configurar controles de reproducción
+    const btnPlay = card.querySelector(".btn-play");
+    if (btnPlay) {
+      btnPlay.onclick = function () {
+        // Si hay un audio reproduciéndose, pausarlo
+        if (audioActual && !audioActual.paused) {
+          audioActual.pause();
+          // Mostrar todos los botones de play y ocultar los de pausa
+          document
+            .querySelectorAll(".btn-play")
+            .forEach((btn) => (btn.style.display = "inline-block"));
+          document
+            .querySelectorAll(".btn-pause")
+            .forEach((btn) => (btn.style.display = "none"));
+        }
+
+        // Reproducir la nueva canción
+        audioActual = new Audio(cancion.url);
+        audioActual.volume = 0.7;
+        audioActual.play();
+
+        // Mostrar el botón de pausa y ocultar el de play en esta tarjeta
+        this.style.display = "none";
+        const pauseBtn = card.querySelector(".btn-pause");
+        if (pauseBtn) pauseBtn.style.display = "inline-block";
+
+        // Configurar evento para cuando termine la canción
+        audioActual.onended = function () {
+          btnPlay.style.display = "inline-block";
+          pauseBtn.style.display = "none";
+        };
+      };
+    }
+
+    // Configurar botón de pausa
+    const btnPause = card.querySelector(".btn-pause");
+    if (btnPause) {
+      btnPause.style.display = "none"; // Ocultar inicialmente
+      btnPause.onclick = function () {
+        if (audioActual && !audioActual.paused) {
+          audioActual.pause();
+          this.style.display = "none";
+          const playBtn = card.querySelector(".btn-play");
+          if (playBtn) playBtn.style.display = "inline-block";
+        }
+      };
+    }
+  });
+
+  console.log("Canciones aleatorias mostradas en la interfaz");
+}
+
+// Función para mostrar las canciones de la playlist en la sección "Mi Playlist Actual"
+function mostrarPlaylist(aleatorizar = false) {
+  if (cancionesPlaylist.length === 0) {
+    console.error("No hay canciones en la playlist disponibles");
+    return;
+  }
+
+  // Obtener el contenedor de la playlist
+  const playlistContainer = document.querySelector(".playlist-container");
+
+  if (!playlistContainer) {
+    console.error("No se encontró el contenedor de la playlist en la interfaz");
+    return;
+  }
+
+  // Limpiar el contenedor actual
+  playlistContainer.innerHTML = "";
+
+  // Si se debe aleatorizar, mezclamos el orden de las canciones
+  let canciones = [...cancionesPlaylist];
+  if (aleatorizar) {
+    // Algoritmo Fisher-Yates para mezclar el array
+    for (let i = canciones.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [canciones[i], canciones[j]] = [canciones[j], canciones[i]];
+    }
+    console.log("Playlist aleatorizada");
+  }
+
+  // Mostrar hasta 10 canciones de la playlist (o menos si no hay suficientes)
+  const maxCanciones = Math.min(canciones.length, 10);
+
+  for (let i = 0; i < maxCanciones; i++) {
+    const cancion = canciones[i];
+    const numeroFormatado = (i + 1).toString().padStart(2, "0");
+
+    // Crear elemento de pista
+    const trackElement = document.createElement("div");
+    trackElement.className =
+      "track animate__animated animate__fadeInUp animate__faster";
+    trackElement.style.animationDelay = `0.${(i % 5) + 1}s`;
+
+    // Añadir número de pista
+    const trackNumber = document.createElement("span");
+    trackNumber.className = "track-number";
+    trackNumber.textContent = numeroFormatado;
+    trackElement.appendChild(trackNumber);
+
+    // Añadir información de la pista
+    const trackInfo = document.createElement("div");
+    trackInfo.className = "track-info";
+
+    const trackTitle = document.createElement("h4");
+    trackTitle.textContent = cancion.nombre_cancion;
+    trackInfo.appendChild(trackTitle);
+
+    const trackArtist = document.createElement("p");
+    trackArtist.textContent = cancion.artista;
+    trackInfo.appendChild(trackArtist);
+
+    trackElement.appendChild(trackInfo);
+
+    // Añadir duración
+    const trackDuration = document.createElement("span");
+    trackDuration.className = "track-duration";
+    trackDuration.textContent = cancion.duracion;
+    trackElement.appendChild(trackDuration);
+
+    // Añadir botón de reproducción (invisible inicialmente)
+    const playButton = document.createElement("button");
+    playButton.className = "btn-play-track";
+    playButton.innerHTML = '<i class="fas fa-play"></i>';
+    playButton.style.display = "none";
+    trackElement.appendChild(playButton);
+
+    // Configurar eventos
+    trackElement.addEventListener("mouseover", function () {
+      trackDuration.style.display = "none";
+      playButton.style.display = "inline-block";
+    });
+
+    trackElement.addEventListener("mouseout", function () {
+      trackDuration.style.display = "inline-block";
+      playButton.style.display = "none";
+    });
+
+    // Configurar reproducción al hacer clic
+    playButton.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      // Si hay otro audio reproduciéndose, pausarlo
+      if (audioActual && !audioActual.paused) {
+        audioActual.pause();
+        // Restaurar los estilos de todas las pistas
+        document.querySelectorAll(".track").forEach((track) => {
+          track.classList.remove("playing");
+        });
+      }
+
+      // Si ya está sonando esta canción, pausarla
+      if (
+        audioActual &&
+        audioActual._trackElement === trackElement &&
+        !audioActual.paused
+      ) {
+        audioActual.pause();
+        trackElement.classList.remove("playing");
+        this.innerHTML = '<i class="fas fa-play"></i>';
+        return;
+      }
+
+      // Reproducir la canción
+      audioActual = new Audio(cancion.enlace_cancion);
+      audioActual._trackElement = trackElement;
+      audioActual.volume = 0.7;
+
+      // Marcar esta pista como reproduciendo
+      trackElement.classList.add("playing");
+      this.innerHTML = '<i class="fas fa-pause"></i>';
+
+      // Configurar eventos del audio
+      audioActual.onended = function () {
+        trackElement.classList.remove("playing");
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
+      };
+
+      audioActual.play().catch((error) => {
+        console.error("Error al reproducir:", error);
+        trackElement.classList.remove("playing");
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
+      });
+    });
+
+    // Añadir al contenedor
+    playlistContainer.appendChild(trackElement);
+  }
+
+  console.log("Playlist mostrada en la interfaz");
 }
 
 // Función para mostrar una canción específica en la interfaz
@@ -215,6 +467,36 @@ async function inicializarCanciones() {
     // Mostrar cada canción en la interfaz
     for (const cancion of cancionesData) {
       mostrarCancion(cancion);
+    }
+
+    // Cargar y configurar canciones aleatorias
+    await cargarCancionesAleatorias();
+    mostrarCancionesAleatorias();
+
+    // Configurar el botón de randomización
+    const btnRandomize = document.querySelector(".btn-randomize");
+    if (btnRandomize) {
+      btnRandomize.addEventListener("click", mostrarCancionesAleatorias);
+      console.log("Botón de randomización configurado");
+    } else {
+      console.error("No se encontró el botón de randomización");
+    }
+
+    // Cargar y mostrar playlist
+    await cargarPlaylist();
+    mostrarPlaylist();
+
+    // Configurar el botón de aleatorización de playlist
+    const btnRandomizePlaylist = document.querySelector(
+      ".btn-randomize-playlist"
+    );
+    if (btnRandomizePlaylist) {
+      btnRandomizePlaylist.addEventListener("click", function () {
+        mostrarPlaylist(true); // Llamar a mostrarPlaylist con parámetro de aleatorización
+      });
+      console.log("Botón de aleatorización de playlist configurado");
+    } else {
+      console.error("No se encontró el botón de aleatorización de playlist");
     }
 
     console.log("Todas las canciones han sido configuradas");
