@@ -1484,14 +1484,6 @@ html {
   font-weight: 500;
 }
 
-.flip-card-divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 12px 0;
-  width: 100%;
-  border: none;
-}
-
 .flip-card-back .card-description {
   flex: 1;
   overflow-y: auto;
