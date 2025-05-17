@@ -1785,41 +1785,21 @@
         </section>
 
         <!-- Sección Artistas Favoritos -->
-        <section id="favorites" class="favorites-section">
-          <h2
-            class="neon-heading wow animate__animated animate__fadeIn animate__faster"
+        <section id="favorites" class="mood-section favorites-section">
+          <div
+            class="mood-header wow animate__animated animate__fadeIn animate__faster"
           >
-            Artistas Favoritos
-          </h2>
-          <div class="artists-grid">
-            <div
-              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
-            >
-              <div class="artist-image"></div>
-              <h3>Nombre Artista</h3>
-              <p>Género principal</p>
-            </div>
-            <div
-              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.5s"
-            >
-              <div class="artist-image"></div>
-              <h3>Nombre Artista</h3>
-              <p>Género principal</p>
-            </div>
-            <div
-              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.7s"
-            >
-              <div class="artist-image"></div>
-              <h3>Nombre Artista</h3>
-              <p>Género principal</p>
-            </div>
-            <div
-              class="artist-card neon-border wow animate__animated animate__fadeInUp animate__faster animate__delay-0.3s"
-            >
-              <div class="artist-image"></div>
-              <h3>Nombre Artista</h3>
-              <p>Género principal</p>
-            </div>
+            <h2 class="mood-heading favorites-heading">
+              Mis
+              <span class="neon-text favorites-text">ARTISTAS FAVORITOS</span>
+            </h2>
+            <p class="mood-description">
+              Los artistas que han marcado mi soundtrack personal
+            </p>
+          </div>
+
+          <div class="artists-grid" id="favorite-artists-container">
+            <!-- Los artistas favoritos se cargarán dinámicamente aquí -->
           </div>
         </section>
 
