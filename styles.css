@@ -20,6 +20,26 @@
   --love-color: #ff69b4;
 }
 
+/* Estilos para el loader */
+#myloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#myloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Estilos generales */
 * {
   margin: 0;

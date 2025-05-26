@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Soundtrack</title>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +41,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
   <body>
+    <lottie-player
+      id="myloader"
+      src="./lottie/loaders.json"
+      background="transparent"
+      speed="1"
+      style="width: auto; height: auto"
+      autoplay
+      loop
+    ></lottie-player>
+
     <div class="container">
       <!-- Barra de navegación lateral simplificada -->
       <nav class="sidebar" id="sidebar">
@@ -1866,13 +1889,13 @@
             </div>
           </div>
 
-          <!-- <div class="neon-button-container">
+          <div class="neon-button-container">
             <button
               class="btn-randomize-playlist animate__animated animate__pulse animate__infinite animate__slow"
             >
               <i class="fas fa-random"></i>&nbsp;&nbsp;Aleatorizar Playlist
             </button>
-          </div> -->
+          </div>
         </section>
 
         <!-- Sección Tu Vida -->
@@ -1881,6 +1904,18 @@
             class="yourlife-content wow animate__animated animate__fadeIn animate__faster"
           >
             <h2 class="neon-heading big-text">Y tu vida, ¿cómo suena?</h2>
+            <model-viewer
+              src="./assets/models/vinilito.glb"
+              alt="Modelo 3D de Vinilo"
+              auto-rotate
+              camera-controls
+              style="width: 100%; height: 500px"
+              environment-image="neutral"
+              exposure="1"
+              shadow-intensity="2"
+              shadow-softness="0.7"
+            ></model-viewer>
+
             <div class="neon-button-container">
               <button
                 class="btn-primary neon-button animate__animated animate__pulse animate__infinite animate__slow"

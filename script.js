@@ -1,4 +1,20 @@
+
+// Función para ocultar el loader
+function hideLoader() {
+  const loader = document.getElementById('myloader');
+  if (loader) {
+    loader.classList.add('hidden');
+  }
+}
+
+// Aseguramos que el loader se muestre antes que cualquier contenido
 document.addEventListener("DOMContentLoaded", function () {
+  // Ocultar el loader después de que todo esté cargado
+  window.addEventListener('load', function() {
+    // Damos un pequeño retraso para asegurar que la animación se vea
+    setTimeout(hideLoader, 2000); // 2 segundos es un buen tiempo para mostrar el loader
+  });
+  
   if (typeof WOW !== "undefined") {
     new WOW().init();
   }
